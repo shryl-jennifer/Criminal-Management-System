@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block body %}
+	<div class="regform"><h1>Contact Us</h1></div>
+	<div class="main">
+		<form action="/contactus" method="POST">
+		<div id="name">
+			<h2 class="name">Name</h2>
+			<input class="firstname" type="text" name="contact_firstname"><br>
+			<label class="firstlabel">First name</label>
+			<input class="lastname" type="text" name="contact_lastname"><br>
+			<label class="lastlabel">Last name</label>
+		</div>
+
+		<h2 class="name">Email</h2>
+		<input class="email" type="text" name="contact_email">
+
+		<h2 class="name" >Phone</h2>
+		<input class="email" type="text" name="contact_phone">
+		
+		<h2 class="name">Gender</h2>
+		<input type="radio" name="contact_gender" value="female">Female
+		<input type="radio" name="contact_gender" value="male">Male
+		<input type="radio" name="contact_gender" value="others">Others
+		
+        <h2 class="name" >Complaint</h2>
+		<input class="email" type="text" name="contact_complaint">
+	   
+	    <button type="submit">Submit</button>
+	    </form>
+        </div>
+    </div>
+{% endblock %}

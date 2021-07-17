@@ -1,0 +1,50 @@
+{% extends "layout1.html" %}
+{% block body %}
+<style>
+    body{
+    background:#666;
+	color:#fff;
+	font-family: 'Sansita Swashed', cursive;
+    line-height:1.9em;
+    }
+    .table{
+    width: 800px;
+	height: 50px;
+	background-color: rgb(0,0,0,0.6);
+	margin: auto;
+	color: #FFFFFF;
+	padding: 30px 0px 30px 0px;
+	text-align: center;
+	border-radius: 20px 20px 0px 0px;
+    }
+</style>
+<div class="regform1"><h1>Criminal Crime Entries</h1></div><br>
+<div class="main1">
+    <form action="/edit/{{crime.crime_criminal_id}}" method="POST">
+        </div>
+        <h2 class="name1">Criminal ID</h2>
+        <input class="email1" type="text" value="{{crime.crime_criminal_id}}" name="crime_criminal_id">
+
+        <h2 class="name1">Crime Area</h2>
+        <input class="email1" type="text" value="{{crime.crime_area}}" name="crime_area">
+
+        <h2 class="name1">Crime City</h2>
+        <input class="email1" type="text" value="{{crime.crime_city}}" name="crime_city">
+
+        <h2 class="name1">Crimie Description</h2>
+        <input class="email1" type="text" value="{{crime.crime_description}}" name="crime_description">
+
+        <h2 class="name1" >Crime Type</h2>
+        <input class="email1" type="text" value="{{crime.crime_type}}" name="crime_type">
+
+        <h2 class="name1" >Crime Section of Law</h2>
+        <input class="email1" type="text" value="{{crime.crime_section_of_law}}" name="crime_section_of_law">
+
+        <h2 class="name1" >Crime Status</h2>
+        <input class="email1" type="text" value="{{crime.crime_status}}" name="crime_status">
+
+        <button type="submit">Submit</button>
+        </form>
+        </div>
+    </div>
+    {% endblock %}

@@ -1,0 +1,45 @@
+{% extends "layout2.html" %}
+{% block body %}
+<style>
+    body{
+    background:#666;
+	color:#fff;
+	font-family: 'Sansita Swashed', cursive;
+    line-height:1.9em;
+    }
+    .table{
+    width: 800px;
+	height: 50px;
+	background-color: rgb(0,0,0,0.6);
+	margin: auto;
+	color: #FFFFFF;
+	padding: 30px 0px 30px 0px;
+	text-align: center;
+	border-radius: 20px 20px 0px 0px;
+    }
+</style>
+
+<div class="container">
+    <h1>POLICE STATION DETAILS</h1><br>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>STATION ID</th>
+          <th>STATION NAME</th>
+          <th>STATION AREA</th>
+          <th>STATION CITY</th>
+        </tr>
+      </thead>
+      <tbody>
+          {% for data in ViewStation %}
+        <tr>
+          <td>{{data.station_id}}</td>
+          <td>{{data.station_name}}</td>
+          <td>{{data.station_area}}</td>
+          <td>{{data.station_city}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endblock %}

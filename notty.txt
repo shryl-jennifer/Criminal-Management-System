@@ -1,0 +1,299 @@
+body{
+	background:#666;
+	color:#fff;
+	font-family:arial;
+	line-height:1.9em;
+}
+
+.header{
+	float: center;
+	width: 100%;
+	color: black;
+	text-align: center;
+}
+
+.image{
+	float: center;
+	padding: 10px 10px 10px 560px;
+}
+a{
+	color:#fff;
+	text-decoration:none;
+}
+
+ul{
+	padding:0;
+}
+#nav{
+	height:85px;
+	background:#666;
+}
+
+#nav ul{
+	padding-top:13px;
+	padding-left:500px;
+}
+
+#nav li{
+	list-style:none;
+	float:left;
+	background-color: black;
+	padding: 10px 10px 10px 10px;
+}
+
+#nav .active{
+	font-weight: bold;
+	color:#333;
+}
+#main{
+	float: left;
+	width: 60%;
+	padding-left: 300px;
+}
+.regform{
+	width: 800px;
+	height: 50px;
+	background-color: rgb(0,0,0,0.6);
+	margin: auto;
+	color: #FFFFFF;
+	padding: 10px 0px 20px 0px;
+	text-align: center;
+	border-radius: 20px 20px 0px 0px;
+}
+.main{
+	background-color: rgb(0,0,0,0.5);
+	width: 800px;
+	margin: auto;
+}
+form{
+	padding: 10px;
+}
+#name{
+	width: 100%;
+	height: 100px;
+}
+.name{
+	margin-left: 25px;
+	margin-top: 30px;
+	width: 125px;
+	color: white;
+	font-size: 18px;
+	font-weight: 700;
+}
+.firstname{
+	position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+}
+.lastname{
+	position: relative;
+	left: 417px;
+	top: -80px;
+	line-height: 40px;
+	border-right: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+	color: #555;
+}
+.firstlabel{
+	position: relative;
+	color: #E5E5E5;
+	text-transform: capitalize;
+	font-size: 14px;
+	left: 203px;
+	top: -45px;
+}
+.lastlabel{
+	position: relative;
+	color: #E5E5E5;
+	text-transform: capitalize;
+	font-size: 14px;
+	left: 490px;
+	top: -80px;
+}
+.email{
+	position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 480px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+	color: #555;
+}
+.code{
+	position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 95px;
+	border-radius: 6px;
+	padding: 0 45px;
+	font-size: 16px;
+	color: #555;
+}
+.radio{
+	display:inline-block;
+	padding-right: 200px;
+	font-size: 25px;
+	margin-left: 25px;
+	margin-top: 15px;
+	color: white;
+}
+.radio input{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	cursor: pointer;
+	outline: none;
+}
+.pass{
+	position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 95px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+	color: #555;
+}
+.conpass{
+	position: relative;
+	left: 200px;
+	top: -70px;
+	line-height: 40px;
+	width: 95px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+	color: #555;
+}
+button{
+	background-color: #3BAF9F;
+	display: block;
+	margin: 20px 0px 0px 20px;
+	text-align: center;
+	border-radius: 12px;
+	border:2px solid #366473;
+	padding: 14px 110px;
+	outline: none;
+	color: white;
+	cursor: pointer;
+	transition: 0.25px;
+}
+button:hover{
+	background-color: #5390F5;
+}
+.main1{
+	float: center;
+	width: 100%;
+	color: black;
+	text-align: center;
+}
+.subs{
+	float: center;
+	width: 100%;
+	color: black;
+	text-align: center;
+	font-family: "Helvetica";
+	font-size: 16px;
+}
+.main2{
+	float: center;
+	width: 100%;
+	color: black;
+	text-align: center;
+}
+.subs1{
+	float: center;
+	width: 100%;
+	color: black;
+	text-align: center;
+	font-family: "Helvetica";
+	font-size: 16px;
+}
+.main3{
+	float: center;
+	width: 100%;
+	color: black;
+	text-align: center;
+}
+.subs2{
+	float: center;
+	width: 100%;
+	color: black;
+	text-align: center;
+	font-family: "Helvetica";
+	font-size: 16px;
+}
+
+
+
+
+
+class Sign(db.Model):
+    sno = db.Column(db.Integer, primary_key=True)
+    firstname = db.Column(db.String(50), unique=True, nullable=False)
+    lastname = db.Column(db.String(50), unique=True, nullable=False)
+    email = db.Column(db.String(50), unique=True, nullable=False)
+    phone = db.Column(db.Integer, unique=True, nullable=False)
+    gender = db.Column(db.String(6), unique=True, nullable=False)
+    password = db.Column(db.String(10), unique=True, nullable=False)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/criminal'#/dbname
+db = SQLAlchemy(app)
+
+class Sign(db.Model):
+    sno = db.Column(db.Integer, primary_key=True)
+    firstname = db.Column(db.String(50), unique=True, nullable=False)
+    lastname = db.Column(db.String(50), unique=True, nullable=False)
+    email = db.Column(db.String(50), unique=True, nullable=False)
+    phone = db.Column(db.Integer, unique=True, nullable=False)
+    gender = db.Column(db.String(6), unique=True, nullable=False)
+    password = db.Column(db.String(10), unique=True, nullable=False)
+
+@app.route('/signup', methods = ['GET', 'POST'])
+def signup():
+    if(request.method=='POST'):
+        firstname=request.form.get('firstname')
+        lastname=request.form.get('lastname')
+        email=request.form.get('email')
+        phone=request.form.get('phone')
+        gender=request.form.getlist('radio')
+        password=request.form.get('password')
+        entry= Sign(firstname=firstname,lastname=lastname,email=email,phone=phone,gender=gender,password=password)
+        db.session.add(entry)
+        db.session.commit()
+        return render_template("success.html")
+    return render_template("Sign Up.html")
+
+@app.route('/login', methods = ['GET', 'POST'])
+def login():
+    if(request.method=='POST'):
+        y = 0
+        email=request.form.get('email')
+        password=request.form.get('password')
+        role=request.form.get('radio')
+        Check = sign.query.all()
+
+        for x in Check:
+             if(email==x.email and password==x.password):
+                 y = 1
+                 return render_template("fir.html")
+        if y == 0:
+            return render_template('error.html')
+         
+                  
+    return render_template('Login.html')
+
+
+
+sno = db.Column(db.Integer, primary_key=True)
+
+

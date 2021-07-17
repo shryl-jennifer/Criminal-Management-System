@@ -1,0 +1,47 @@
+{% extends "layout2.html" %}
+{% block body %}
+<style>
+    body{
+    background:#666;
+	color:#fff;
+	font-family: 'Sansita Swashed', cursive;
+    line-height:1.9em;
+    }
+    .table{
+    width: 800px;
+	height: 50px;
+	background-color: rgb(0,0,0,0.6);
+	margin: auto;
+	color: #FFFFFF;
+	padding: 30px 0px 30px 0px;
+	text-align: center;
+	border-radius: 20px 20px 0px 0px;
+    }
+</style>
+
+<div class="container">
+    <h1>VIEW POLICE DETAILS</h1><br>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>POLICE STATION ID</th>
+          <th>POLICE Name</th>
+          <th>POLICE EMAIL</th>
+          <th>POLICE AGE</th>
+          <th>POLICE GENDER</th>
+        </tr>
+      </thead>
+      <tbody>
+          {% for data in ViewPoliceDetails %}
+        <tr>
+          <td><a href='/viewpolicestation/{{data.police_station_id}}'>{{data.police_station_id}}</a></td>
+          <td>{{data.police_name}}</td>
+          <td>{{data.police_email}}</td>
+          <td>{{data.police_age}}</td>
+          <td>{{data.police_gender}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endblock %}

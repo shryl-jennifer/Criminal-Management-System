@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="regform"><h1>FIR FORM</h1></div>
+	<div class="main">
+        <form action="/fir" method="POST">
+            <div id="name">
+                <h2 class="name">Name</h2>
+                <input class="firstname" type="text" name="firstname"><br>
+                <label class="firstlabel">First name</label>
+                <input class="lastname" type="text" name="lastname"><br>
+                <label class="lastlabel">Last name</label>
+            </div>
+
+            <h2 class="name">Email</h2>
+            <input class="email" type="text" name="email">
+
+            <h2 class="name">Date of Birth</h2>
+            <input class="email" type="text" name="date_of_birth">
+            
+            <h2 class="name" >Phone</h2>
+            <input class="email" type="text" name="phone">
+            
+            <h2 class="name">Gender</h2>
+		    <input type="radio" name="gender" value="female">Female
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="others">Others
+
+            <h2 class="name" >Nationality</h2>
+            <input class="email" type="text" name="nationality">
+
+            <h2 class="name" >Occupation</h2>
+            <input class="email" type="text" name="occupation">
+
+            <h2 class="name" >Address</h2>
+            <input class="email" type="text" name="address">
+
+            <h2 class="name">Date of Registration</h2>
+            <input class="email" type="text" name="date_of_registration">
+
+            <h2 class="name" >Complaint</h2>
+            <input class="email" type="text" name="complaint">
+
+            <h2 class="name" >Complaint Type</h2>
+            <input class="email" type="text" name="crime_category">
+
+            <h2 class="name" >Place of occurence</h2>
+            <input class="email" type="text" name="place_of_occurence">
+
+            <h2 class="name" >Police Station</h2>
+            <input class="email" type="text" name="police_station">
+
+            <button type="submit">Submit</button>
+            </form>
+            </div>
+        </div>
+    {% endblock %}
+
+
+
+            

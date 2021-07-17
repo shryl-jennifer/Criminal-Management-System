@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='cssfor/style.css') }}"> 
+    <title>criminal</title>
+</head>
+<body>
+    <style>
+        .regform1{
+            width: 800px;
+	height: 50px;
+	margin: auto;
+	color: #FFFFFF;
+	padding: 10px 0px 20px 0px;
+	text-align: center;
+	border-radius: 20px 20px 0px 0px;
+        }
+    .main1{
+	width: 800px;
+	margin: auto;
+    }
+    form{
+	padding: 10px;
+}
+.name1{
+    margin-left: 50px;
+	margin-top: 30px;
+	width: 125px;
+	color: white;
+	font-size: 18px;
+	font-weight: 700;
+}
+.email1{
+    position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 480px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+	color: #555;
+}
+    </style>
+<div class="regform1"><h1>Criminal Entries</h1></div><br>
+<div class="main1">
+    <form action="/edit/{{criminal.criminal_id}}" method="POST">
+        </div>
+        <h2 class="name1">Criminal Name</h2>
+        <input class="email1" type="text" value="{{criminal.criminal_name}}" name="criminal_name">
+
+        <h2 class="name1">Criminal Mobile</h2>
+        <input class="email1" type="text" value="{{criminal.criminal_mobile}}" name="criminal_mobile">
+
+        <h2 class="name1">Criminal Age</h2>
+        <input class="email1" type="text" value="{{criminal.criminal_age}}" name="criminal_age">
+
+        <h2 class="name1">Criminal Email</h2>
+        <input class="email1" type="text" value="{{criminal.criminal_email}}" name="criminal_email">
+        
+        <h2 class="name1">Gender</h2>
+        <input type="radio" name="criminal_gender" value="{{criminal.criminal_gender}}">Female
+        <input type="radio" name="criminal_gender" value="{{criminal.criminal_gender}}">Male
+        <input type="radio" name="criminal_gender" value="{{criminal.criminal_gender}}">Others
+
+        <h2 class="name1" >Address</h2>
+        <input class="email1" type="text" value="{{criminal.criminal_address}}" name="criminal_address">
+
+        <button type="submit">Submit</button>
+        </form>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

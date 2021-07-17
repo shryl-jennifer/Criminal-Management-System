@@ -1,0 +1,16 @@
+// this was there after edit  crime_crimina_id in app.py
+
+@app.route('/delete/<string:crime_criminal_id>', methods = ['GET','POST'])
+def delete1(crime_criminal_id):
+    crime = Crime.query.filter_by(crime_criminal_id=crime_criminal_id).first()
+    db.session.delete(crime)
+    db.session.commit()
+    return redirect('/viewcrime') 
+
+// this was there in viewcrime.html after edit 
+
+<th>Delete</th>
+
+//this was there after viewcrime.html after edit button
+
+<td><a href="/delete/{{data.crime_criminal_id}}"><button  class="btn btn-danger">Delete</button></a></td>

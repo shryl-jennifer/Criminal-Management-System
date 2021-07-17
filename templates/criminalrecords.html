@@ -1,0 +1,56 @@
+{% extends "layout2.html" %}
+{% block body %}
+<style>
+    body{
+    background:#666;
+	color:#fff;
+	font-family: 'Sansita Swashed', cursive;
+    line-height:1.9em;
+    }
+    .table{
+    width: 800px;
+	height: 50px;
+	background-color: rgb(0,0,0,0.6);
+	margin: auto;
+	color: #FFFFFF;
+	padding: 30px 0px 30px 0px;
+	text-align: center;
+	border-radius: 20px 20px 0px 0px;
+    }
+</style>
+
+<div class="container">
+    <h1>CRIMINAL RECORDS</h1><br>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Criminal ID</th>
+          <th>Criminal Name</th>
+          <th>Criminal Mobile</th>
+          <th>Criminal Age</th>
+          <th>Criminal Email</th>
+          <th>Criminal Gender</th>
+          <th>Criminal Address</th>
+          <th>Status</th>
+          <th>Inspection</th>
+        </tr>
+      </thead>
+      <tbody>
+          {% for data in CriminalRecords %}
+        <tr>
+          <td>{{data.criminal_id}}</td>
+          <td>{{data.criminal_name}}</td>
+          <td>{{data.criminal_mobile}}</td>
+          <td>{{data.criminal_age}}</td>
+          <td>{{data.criminal_email}}</td>
+          <td>{{data.criminal_gender}}</td>
+          <td>{{data.criminal_address}}</td>
+          <td>{{data.criminal_status}}</td>
+          <td><a href='/criminal_records/{{data.criminal_id}}'><button class="btn btn-info">Inspect</button></a></td>
+          <td><a href='/criminal_records1/{{data.criminal_id}}'><button class="btn btn-info">Stop Inspecting</button></a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endblock %}

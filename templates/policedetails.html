@@ -1,0 +1,66 @@
+{% extends "layout2.html" %}
+{% block body %}
+    <style>
+        .regform1{
+            width: 800px;
+	height: 50px;
+	margin: auto;
+	color: #FFFFFF;
+	padding: 10px 0px 20px 0px;
+	text-align: center;
+	border-radius: 20px 20px 0px 0px;
+        }
+    .main1{
+	width: 800px;
+	margin: auto;
+    }
+    form{
+	padding: 10px;
+}
+.name1{
+    margin-left: 50px;
+	margin-top: 30px;
+	width: 125px;
+	color: white;
+	font-size: 18px;
+	font-weight: 700;
+}
+.email1{
+    position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 480px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+	color: #555;
+}
+    </style>
+<div class="regform1"><h1>Police Details</h1></div><br>
+	<div class="main1">
+        <form action="/policedetails" method="POST">
+            </div>
+            <h2 class="name1">Police Station ID</h2>
+            <input class="email1" type="text" name="police_station_id">
+
+            <h2 class="name1">Police Name</h2>
+            <input class="email1" type="text" name="police_name">
+
+            <h2 class="name1">Police Email</h2>
+            <input class="email1" type="text" name="police_email">
+
+            <h2 class="name1">Police Age</h2>
+            <input class="email1" type="text" name="police_age">
+            
+            <h2 class="name1"> Police Gender</h2>
+		    <input type="radio" name="police_gender" value="female">Female
+            <input type="radio" name="police_gender" value="male">Male
+            <input type="radio" name="police_gender" value="others">Others
+
+            <button type="submit">Submit</button>
+            </form>
+            </div>
+        </div>
+        {% endblock %}
+         

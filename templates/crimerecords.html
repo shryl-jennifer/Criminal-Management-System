@@ -1,0 +1,69 @@
+{% extends "layout1.html" %}
+{% block body %}
+    <style>
+        .regform1{
+            width: 800px;
+	height: 50px;
+	margin: auto;
+	color: #FFFFFF;
+	padding: 10px 0px 20px 0px;
+	text-align: center;
+	border-radius: 20px 20px 0px 0px;
+        }
+    .main1{
+	width: 800px;
+	margin: auto;
+    }
+    form{
+	padding: 10px;
+}
+.name1{
+    margin-left: 50px;
+	margin-top: 30px;
+	width: 125px;
+	color: white;
+	font-size: 18px;
+	font-weight: 700;
+}
+.email1{
+    position: relative;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 480px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+	color: #555;
+}
+    </style>
+<div class="regform1"><h1>Criminal Crime Entries</h1></div><br>
+	<div class="main1">
+        <form action="/crimerecords" method="POST">
+            </div>
+            <h2 class="name1">Crime Criminal ID</h2>
+            <input class="email1" type="text" name="crime_criminal_id">
+
+            <h2 class="name1">Crime Area</h2>
+            <input class="email1" type="text" name="crime_area">
+
+            <h2 class="name1">Crime City</h2>
+            <input class="email1" type="text" name="crime_city">
+
+            <h2 class="name1">Crime Description</h2>
+            <input class="email1" type="text" name="crime_description">
+
+            <h2 class="name1">Crime Type</h2>
+            <input class="email1" type="text" name="crime_type">
+
+            <h2 class="name1">Section of Law</h2>
+            <input class="email1" type="text" name="crime_section_of_law">
+
+            <h2 class="name1">Criminal Status</h2>
+            <input class="email1" type="text" name="crime_status">
+
+            <button type="submit">Submit</button>
+            </form>
+            </div>
+        </div>
+        {% endblock %}
